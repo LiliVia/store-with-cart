@@ -1,0 +1,34 @@
+<div class="details">
+
+  <div class="cart">
+    <md-card ng-class="card" layout="column" layout-align="center center">
+      <md-card-header class="cart-header">
+        <h2>This is your cart</h2>
+      </md-card-header>
+      <md-card-header-text>
+        <ul class="show-cart" ng-repeat="item in cart">
+          <li layout="row" layout-align="space-between">
+            <div class="item" layout="row" layout-align="space-between">
+              <div class="name-item">{{item.name}}</div>
+              <div class="item-count" layout="row" layout-align="space-between">
+                <div class="minus-item" ng-click="removeOne(item)">-</div>
+                <div class="count-item">{{item.count}}</div>
+                <div class="add-item" ng-click="addOneItem(item)">+</div>
+              </div>
+              <div class="cost-item">{{item.cost * item.count}}</div>
+              <div class="remove-item" ng-click="removeAllItem(item)">x</div>
+            </div>
+          </li>
+        </ul>
+        <div class="total-in-cart">
+          <span>Total </span>
+          <span class="total-cost">{{total | currency}}</span>
+        </div>
+      </md-card-header-text>
+      <md-button id="clear-cart" ng-click="deleteAll()">Clear cart</md-button>
+    </md-card>
+  </div>
+
+
+
+</div>

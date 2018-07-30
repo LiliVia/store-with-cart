@@ -1,0 +1,34 @@
+<div class="dashboard">
+  <div class="go-to-cart">
+    <a class="" href="/user/cart">
+      Go to Cart
+    </a>
+  </div>
+  <md-content class="md-padding list" layout-xs="column" layout="row">
+    <div class="list-item" ng-repeat="item in devices | limitTo: itemsLimit()" layout="column">
+      <md-card ng-class="card">
+        <md-card-header class="">
+          <md-card-header-text>
+            <span class="md-title">{{item.name}}</span>
+            <span class="md-subhead">{{item.manufacturer}}</span>
+          </md-card-header-text>
+        </md-card-header>
+        <div class="media">
+          <md-card-title>
+            <md-card-title-text layout="column" layout-align="space-between">
+              <span class="md-subhead">{{item.specification}}</span>
+            </md-card-title-text>
+          </md-card-title>
+        </div>
+        <md-card-actions layout="row" layout-align="space-between">
+          <span class="md-title item-cost">{{item.cost | currency}}</span>
+          <md-button class="add-item" ng-click="addItemToCart(item)">+ 1 to cart</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+    <md-button class="showmore" ng-show="hasMoreItemsToShow()" ng-click="showMoreItems()">
+      <span class="showitems">+ {{pageSize}}</span>
+      <span>More to show</span>
+    </md-button>
+  </md-content>
+</div>

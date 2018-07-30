@@ -1,0 +1,26 @@
+.root {
+  text-align: center;
+  color: red;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.2rem 4rem;
+    margin: 2px;
+    background: rgb(241, 240, 240);
+    text-decoration: none;
+    :hover {
+      color: black;
+      background: whitesmoke;
+      text-decoration: none;
+    }
+    >a {
+      padding: 15px;
+      color: rgb(97, 93, 93);
+      font-weight: 600;
+      font-size: 1.5rem;
+      .total-cost {
+        color: darkcyan;
+      }
+    }
+  }
+}

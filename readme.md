@@ -1,11 +1,8 @@
-##Testing Angular 1.6 
-
-
-#### How to start
+ the Store App with the list of goods and a cart
+ with routing and saving the state in localStorage
  
- my Node version 7.5
+ *how to test:*
  
-
  - ###### install the repo with npm
 
  ```npm install```
@@ -14,6 +11,5 @@
 
  ``` npm run dev ```
 
- (or use yarn)
  
- and go to  [http://localhost:2992](http://localhost:2992)
+ go to  [http://localhost:2992](http://localhost:2992)
